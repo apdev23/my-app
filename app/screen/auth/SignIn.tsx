@@ -9,6 +9,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { Link, useRouter } from 'expo-router';
 import Toast from 'react-native-toast-message';
 import axios from 'axios';
+import Logo from '../../../assets/svg/app-logo-big.svg';
 
 const schema = yup.object().shape({
     email: yup
@@ -55,13 +56,15 @@ const SignIn = () => {
                 <KeyboardAvoidingView style={{ flex: 1 }}>
                     <ScrollView style={{ flex: 1 }}>
                         <View style={{ flex: 1 }}>
-                            <Image source={require('../../../assets/images/icon.png')} className='w-full h-1/4 self-center mt-10' resizeMode='contain' />
+                            <View className='self-center'>
+                                <Logo width={300} height={120} />
+                            </View>                            
                             {(errors.email || errors.password) &&
                                 <View className='bg-red-400 rounded mx-9 px-5 py-5 mt-5'>
                                     {errors?.email && (<Text className='text-white'>{errors?.email?.message}</Text>)}
                                     {errors?.password && (<Text className='text-white'>{errors?.password?.message}</Text>)}
                                 </View>}
-                            <View className='mx-9'>
+                            <View className='mx-9 mt-4'>
                                 <Text className='text-white text-xl text-center mt-5 mb-3'>Email Address <Text className='text-red-600 text-1xl'>*</Text></Text>
                                 <Controller control={control}
                                     name='email'

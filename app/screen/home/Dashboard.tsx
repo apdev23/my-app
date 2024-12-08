@@ -3,9 +3,6 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Dashboard = () => {
-
-    console.log("dashboard");
-
     return (
         <View className="flex-1 bg-white items-center">
             {/* Header */}

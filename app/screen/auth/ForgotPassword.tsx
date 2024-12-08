@@ -9,6 +9,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { Link, useRouter } from 'expo-router';
 import Toast from 'react-native-toast-message';
 import axios from 'axios';
+import Logo from '../../../assets/svg/app-logo-big.svg';
 
 const schema = yup.object().shape({
     email: yup
@@ -58,11 +59,9 @@ const ForgotPasswordScreen = () => {
                         keyboardShouldPersistTaps="handled"
                     >
                         <View style={{ flex: 1 }}>
-                            <Image
-                                source={require('../../../assets/images/icon.png')}
-                                className="w-full h-1/4 self-center mt-20 mb-5"
-                                resizeMode="contain"
-                            />
+                            <View className='self-center mt-20 mb-5'>
+                                <Logo width={300} height={120} />
+                            </View>
                             <View className="mx-9">
                                 <Text className="text-white text-2xl text-center font-bold pt-4">
                                     Forgot your password?

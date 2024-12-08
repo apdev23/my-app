@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CLOSE</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="App---" transform="translate(-306, -319)">
+            <g id="Dashboard" transform="translate(1, 156)">
+                <g id="Group" transform="translate(27, 122)">
+                    <g id="CLOSE" transform="translate(299.565, 62.565) rotate(45) translate(-299.565, -62.565)translate(284.565, 47.565)">
+                        <rect id="Rectangle-4" fill="#4860F8" x="0" y="0" width="30" height="30" rx="15"></rect>
+                        <polygon id="Rectangle" fill="#FDF6FE" transform="translate(14.7973, 14.7973) rotate(45) translate(-14.7973, -14.7973)" points="13.7837838 6.08108108 15.8108108 6.08108108 15.8108108 23.5135135 13.7837838 23.5135135"></polygon>
+                        <polygon id="Rectangle" fill="#FDF6FE" transform="translate(14.7973, 14.7973) scale(-1, 1) rotate(45) translate(-14.7973, -14.7973)" points="13.7837838 6.08108108 15.8108108 6.08108108 15.8108108 23.5135135 13.7837838 23.5135135"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
