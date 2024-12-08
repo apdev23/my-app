@@ -1,34 +1,45 @@
 import CommonHeader from "@/app/components/CommonHeader";
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, Pressable } from "react-native";
+import PlusIcon from '../../../assets/svg/plus.svg';
+import PlusActiveIcon from '../../../assets/svg/plus-active.svg';
+import { Link } from "expo-router";
 
 const Dashboard = () => {
+    const [tap, setTap] = useState(false);
     return (
         <View className="flex-1 bg-white items-center">
-            {/* Header */}
+
             <View className="w-full">
                 <CommonHeader />
             </View>
 
-            {/* Button */}
-            <TouchableOpacity
-                className="bg-white py-5 border-hairline border-gray-200 rounded-lg shadow-md w-full mt-5 max-w-sm flex-row"
-                onPress={() => alert("Tap to Pay Button Pressed!")}
-            >
-                <View>
-                    <Text className="text-blue-800 font-bold text-2xl">
-                        Tap to Pay Payment
-                    </Text>
-                    <Text className="text-gray-500 text-sm">Send a payment to this device.</Text>
-                </View>
-            </TouchableOpacity>
+            <View className="w-96 px-5">
+                <Link href={'/screen/home/TapToPayComplete'} onPress={() => setTap(true)} asChild>
+                    <Pressable
+                        className={`bg-white py-5 justify-between active:bg-green-200 pe-3 ps-7 border-hairline border-gray-200 rounded-lg shadow-md mt-5 max-w-sm flex-row ${tap ? 'bg-green-200' : 'bg-white'
+                            }`}
+                        onPress={() => setTap(true)}
+                    >
+                        <View className="">
+                            <Text className="text-blue-800 font-bold text-2xl">
+                                Tap to Pay Payment
+                            </Text>
+                            <Text className="text-blue-900 font-bold text-base">Send a payment to this device.</Text>
+                        </View>
+                        <View className="justify-center">
+                            {tap == true ? <PlusActiveIcon width={40} height={40} /> : <PlusIcon width={40} height={40} />}
+                        </View>
+                    </Pressable>
+                </Link>
 
-            {/* Footer Text */}
-            <View className="mt-8 items-center">
-                <Text className="text-gray-800 font-semibold text-lg">
+            </View>
+
+            <View className="mt-8 w-96 px-5">
+                <Text className="text-blue-800 font-bold text-2xl">
                     Looking for something?
                 </Text>
-                <Text className="text-gray-500 text-center mt-2 px-4">
+                <Text className="text-blue-900 text-sm mt-2">
                     SplitSum's full features are not yet available in the app. Visit the
                     website to use other features of the platform.
                 </Text>

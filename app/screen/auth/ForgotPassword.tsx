@@ -1,6 +1,5 @@
-import { View, Text, ImageBackground, Image, TouchableOpacity, Pressable, KeyboardAvoidingView, ScrollView, Platform, ActivityIndicator } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, KeyboardAvoidingView, ScrollView, Platform, ActivityIndicator } from 'react-native';
 import React, { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomTextInput from '@/app/components/CustomTextInput';
 import * as yup from 'yup';
@@ -126,7 +125,6 @@ const ForgotPasswordScreen = () => {
             </KeyboardAvoidingView>
 
             <Toast />
-            <StatusBar style="light" />
 
         </ImageBackground>
     );

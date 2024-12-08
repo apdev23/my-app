@@ -58,7 +58,7 @@ const SignIn = () => {
                         <View style={{ flex: 1 }}>
                             <View className='self-center'>
                                 <Logo width={300} height={120} />
-                            </View>                            
+                            </View>
                             {(errors.email || errors.password) &&
                                 <View className='bg-red-400 rounded mx-9 px-5 py-5 mt-5'>
                                     {errors?.email && (<Text className='text-white'>{errors?.email?.message}</Text>)}
@@ -107,9 +107,7 @@ const SignIn = () => {
                                     )}
                                 />
                                 <TouchableOpacity disabled={loading}
-                                    // onPress={handleSubmit(onSubmit)} 
-                                    onPress={() => router.push('/screen/home/Dashboard')}
-
+                                    onPress={handleSubmit(onSubmit)}
                                     className='bg-green-200 rounded-full py-6 mt-9'>
                                     {loading ? (
                                         <ActivityIndicator size={'small'} color="#0000ff" />
@@ -133,7 +131,8 @@ const SignIn = () => {
                 </KeyboardAvoidingView>
 
                 <Toast />
-                <StatusBar style="auto" />
+                <StatusBar translucent={true} backgroundColor="transparent" />
+
             </SafeAreaView>
         </ImageBackground>
     );

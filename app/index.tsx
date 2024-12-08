@@ -3,6 +3,7 @@ import { View } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import '../global.css';
+import { StatusBar } from "expo-status-bar";
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -48,7 +49,11 @@ export default function RootLayout() {
         <Stack.Screen name="screen/auth/SignIn" />
         <Stack.Screen name="screen/auth/ForgetPassword" />
         <Stack.Screen name="screen/home/Dashboard" />
+        <Stack.Screen name="screen/home/TapToPayComplete" />
+        <Stack.Screen name="screen/home/TapToPay" />
       </Stack>
+
+      <StatusBar translucent={true} backgroundColor="transparent" />
     </View>
   );
 }
